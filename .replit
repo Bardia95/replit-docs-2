@@ -1,4 +1,4 @@
-run = "yarn serve"
+run = "yarn start"
 
 [nix]
 channel = "stable-21_11"

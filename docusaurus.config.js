@@ -1,5 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -351,11 +350,14 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   organizationName: 'replit',
   projectName: 'replit-docs-2',
+  favicon: 'image/favicon.ico',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
   plugins: [
+    "./plugins/analytics",
+    "./plugins/frame-comms",
     [
       '@docusaurus/plugin-client-redirects',
       {
@@ -393,6 +395,16 @@ const config = {
       }),
     ],
   ],
+  // themes: [
+  //   [
+  //     require.resolve("@easyops-cn/docusaurus-search-local"),
+  //     {
+  //       hashed: true,
+  //       docsRouteBasePath: '/',
+  //       highlightSearchTermsOnTargetPage: true,
+  //     },
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -400,7 +412,6 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      favicon: '/image/favicon.ico',
       navbar: {
         hideOnScroll: true,
         items: [
@@ -438,7 +449,7 @@ const config = {
         appId: '33H1G1RMZJ',
         apiKey: '17617634403a792c4cf6f749c49ae0aa',
         indexName: 'replit-docs',
-        contextualSearch: false
+        contextualSearch: true
       },
     },
 };

@@ -39,6 +39,7 @@
   --ifm-color-secondary-darker: #c8c9cc;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: white;
 /*   --ifm-navbar-background-color: var(--ifm-background-color); */
 }
 
@@ -246,8 +247,9 @@ html[data-theme='dark'] {
   .DocSearch-Button {
     height: 22px !important;
     width: 22px! important;
-    border-radius: 4px !important;
+    border-radius: 8px !important;
     padding: 0 4px !important;
+    background: transparent !important;
   }
   
   .DocSearch-Search-Icon {
